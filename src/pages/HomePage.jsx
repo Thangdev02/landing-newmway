@@ -61,17 +61,17 @@ export default function HomePage() {
     {
       title: "Thủ Công Tinh Xảo",
       desc: "Mỗi sản phẩm được chế tác thủ công bởi nghệ nhân lành nghề",
-      image: "https://images.unsplash.com/photo-1607013251379-e6eecfffe234"
+      image: "https://scontent.fvkg1-1.fna.fbcdn.net/v/t39.30808-6/480624049_1043236644512674_6705222740023721446_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=SSlvSLNh24gQ7kNvwEKUOkr&_nc_oc=Adn8BXrFzBVpaMHFjpyksH1oCRwo6hdddxpuTL5gGOarmYTGxoAa2uvdSBfeg4RaHojP_huw46mLmUVsfTahLTNz&_nc_zt=23&_nc_ht=scontent.fvkg1-1.fna&_nc_gid=d6E3Ei3dfOEKGwZWE8LkxQ&oh=00_Afrh42WOo0kl4MOoN15iA03j-oIuKIMMrtOT6J2FqAm2AQ&oe=697ED311"
     },
     {
       title: "Bảo Vệ Dao Bếp",
       desc: "Bề mặt gỗ mềm giúp dao luôn sắc bén, không bị mòn",
-      image: "https://images.unsplash.com/photo-1593618998160-e34014e67546"
+      image: "https://scontent.fvkg1-1.fna.fbcdn.net/v/t39.30808-6/481477715_1043236504512688_8111090880355841662_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=AK_7V5MjaXAQ7kNvwG604lJ&_nc_oc=AdlNiDEdxaIuM6rWcOLzQFKvMchZ_mTl8ZqU5wKq5XTEFDH1xG9GBxwzzBjeIqBJ7BgRRviko-xyhDm1xChYqbv1&_nc_zt=23&_nc_ht=scontent.fvkg1-1.fna&_nc_gid=APWbV5zAMOZZnGvk4l2Fmg&oh=00_AfqsUubnEMVLnn_R9Xs0bneDVjXn63nq6SlheIgaiVU2AA&oe=697EED89"
     },
     {
       title: "An Toàn Thực Phẩm",
       desc: "100% tự nhiên, không chất hóa học độc hại",
-      image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d"
+      image: "https://scontent.fvkg1-1.fna.fbcdn.net/v/t39.30808-6/480925500_1041991044637234_5881159900061214901_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=FDPXYo1zBpgQ7kNvwGu9JUQ&_nc_oc=AdnK5VJKhxfqmBCPlPaxB1jLNMtUMf7UEczSOTI8ZgyzQ2PqTI_waWTzq45p7wauLCDTl0g8GGIuHTDmdBqFkjzF&_nc_zt=23&_nc_ht=scontent.fvkg1-1.fna&_nc_gid=tznrLlC_tZG6C7nK42U2UA&oh=00_AfrqrEAKp8HfhUt5gx7DRGANWX8SwuMBEZA7l1o1RSONSw&oe=697ED8E7"
     }
   ];
 
@@ -283,7 +283,7 @@ export default function HomePage() {
             hover: { y: -6, scale: 1.1 },
           }}
           transition={{ type: "spring", stiffness: 300 }}
-          className="text-pink-500"
+          className="text-green-800"
         >
           <Icon size={36} />
         </motion.div>
@@ -382,9 +382,9 @@ export default function HomePage() {
                       <div className="w-2 h-2 rounded-full bg-green-400"></div>
                     </div>
                     <img
-                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop"
+                      src="./web.png"
                       alt="Website"
-                      className="w-full rounded-lg"
+                      className="w-full h-64 rounded-lg"
                     />
                   </div>
                 </motion.div>
@@ -407,7 +407,7 @@ export default function HomePage() {
                         <img
                           src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&auto=format&fit=crop"
                           alt="Mobile App"
-                          className="w-full"
+                          className="w-80 h-96"
                         />
                       </div>
                     </div>
@@ -536,61 +536,7 @@ export default function HomePage() {
         </div>
       </motion.section>
 
-      {/* PRODUCT GRID */}
-      <motion.section 
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        className="py-20 lg:py-32 bg-white"
-      >
-        <div className="max-w-6xl mx-auto px-6 lg:px-12">
-          <motion.h2 
-            variants={fadeInUp}
-            className="font-serif text-4xl lg:text-6xl mb-8 text-stone-900 text-center"
-          >
-            Sản phẩm nổi bật
-          </motion.h2>
-
-          <motion.p 
-            variants={fadeInUp}
-            className="text-base lg:text-lg mb-16 text-stone-600 max-w-3xl mx-auto leading-relaxed text-center"
-          >
-            Khám phá bộ sưu tập thớt gỗ cao cấp được chế tác tỉ mỉ
-          </motion.p>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {products.map((product, index) => (
-              <motion.div
-                key={index}
-                variants={fadeInUp}
-                whileHover={{ y: -10 }}
-                className="bg-stone-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group"
-              >
-                <div className="relative h-64 overflow-hidden">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6 text-center">
-                  <h3 className="font-serif text-xl mb-2 text-stone-900">{product.name}</h3>
-                  <p className="text-sm text-stone-600 mb-3">{product.size}</p>
-                  <p className="text-lg font-bold text-amber-700 mb-4">{product.price}</p>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-full bg-amber-600 text-white py-2 rounded-full text-sm font-medium hover:bg-amber-700 transition-colors"
-                  >
-                    Thêm vào giỏ
-                  </motion.button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
+     
 
       {/* LARGE PRODUCT SHOWCASE */}
       <motion.section 
