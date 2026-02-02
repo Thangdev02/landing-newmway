@@ -134,10 +134,10 @@ const featuredBoards = [
               className="flex flex-wrap gap-4"
             >
               <button className="bg-amber-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-amber-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 pointer-events-auto">
-                Xem sản phẩm
+               <a href="https://newmwayteakwood.vn/product">Xem sản phẩm</a> 
               </button>
               <button className="border-2 border-stone-900 text-stone-900 px-8 py-4 rounded-full font-semibold hover:bg-stone-900 hover:text-white transition-all pointer-events-auto">
-                Tìm hiểu thêm
+                <a href="https://newmwayteakwood.vn/info"> Tìm hiểu thêm</a>
               </button>
             </motion.div>
 
@@ -183,7 +183,6 @@ const featuredBoards = [
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
         >
           <div className="flex flex-col items-center gap-2">
-            <span className="text-xs text-stone-600 tracking-wider">SCROLL</span>
             <div className="w-px h-12 bg-stone-400"></div>
           </div>
         </motion.div>
