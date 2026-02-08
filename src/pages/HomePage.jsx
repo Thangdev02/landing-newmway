@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import CuttingBoard3D from "../components/Cuttingboard3d";
 
 export default function HomePage() {
-    
+
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -36,25 +36,26 @@ export default function HomePage() {
     }
   };
 
-const featuredBoards = [
-  {
-    name: "",
-    desc: "Vân gỗ sang trọng, chống ẩm và rất bền.",
-    price: "890.000đ",
-  },
-  {
-    name: "Thớt Đa Năng Cao Cấp",
-    desc: "Phù hợp cho mọi nhu cầu bếp núc hằng ngày.",
-    price: "750.000đ",
-    image: "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/480632834_122212351142035371_5270333421979788317_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=pn3UrzEtbH4Q7kNvwFspxEo&_nc_oc=AdldgfTZkuHaEZh4y28eQsMmAKD4MkIAWC-_KrbfARLz06Ycv0JXLh65cnAW1uTKKvE&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=rZ35wNAhnthYAarZPQnpyg&oh=00_AfvfP81sBVlskl7KLnGcE3NJuFYmuEIxMKNh3OYZ_ymBWg&oe=69854315",
-  },
-  {
-    name: "Thớt Teak Viền Bo Tròn",
-    desc: "Thiết kế tinh tế, dễ vệ sinh và bảo quản.",
-    price: "820.000đ",
-    image: "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/480612648_122212351574035371_2400893491941376911_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=VG3Xpc5FKUoQ7kNvwHdWTfc&_nc_oc=AdmJsStNL4GFwywMobxdZ3EMwwJgjEL9v82FYDvTh8D7Sas0HOZYeL82yB_d5FQuhZo&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=E9Ema52Z-_3rz0pAn9HoOQ&oh=00_AftE9jKZVxiLR-u5HR70p2uUP_A0_gBxdJIqU-fRpZzcCw&oe=6985215F",
-  }
-];
+  const featuredBoards = [
+    {
+      name: "Thớt Gỗ Teak NEW M WAY Vuông Và Chữ Nhật Dày 38mm",
+      desc: "Thớt gỗ teak New M Way được khai thác và sản xuất nguyên chất từ Gỗ rừng trồng Teak... ",
+      price: "351.076 VND",
+      image: "https://down-vn.img.susercontent.com/file/vn-11134201-23020-8g48kccrw2nvea@resize_w450_nl.webp",
+    },
+    {
+      name: "Combo 2 sản phẩm thớt Thái và chặt gà vịt siêu tiết kiệm CB0104",
+      desc: "Thớt gỗ teak New M Way được khai thác và sản xuất nguyên chất từ Gỗ rừng trồng Teak... ",
+      price: "679.540 VND",
+      image: "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lkwqe3hhc9ul1c@resize_w450_nl.webp",
+    },
+    {
+      name: "Thớt Gỗ Teak NEW M WAY Đầu Cây dài 40cm",
+      desc: "Thớt gỗ teak New M Way được khai thác và sản xuất nguyên chất từ Gỗ rừng trồng Teak... ",
+      price: "663.734 VND",
+      image: "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/480612648_122212351574035371_2400893491941376911_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=VG3Xpc5FKUoQ7kNvwHdWTfc&_nc_oc=AdmJsStNL4GFwywMobxdZ3EMwwJgjEL9v82FYDvTh8D7Sas0HOZYeL82yB_d5FQuhZo&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=E9Ema52Z-_3rz0pAn9HoOQ&oh=00_AftE9jKZVxiLR-u5HR70p2uUP_A0_gBxdJIqU-fRpZzcCw&oe=6985215F",
+    }
+  ];
 
   const features = [
     {
@@ -89,7 +90,7 @@ const featuredBoards = [
       {/* NEW HOME HERO WITH 3D */}
       <section className="relative h-screen overflow-hidden bg-gradient-to-br from-amber-50 via-stone-50 to-amber-100">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptMCAxMmMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIGZpbGw9IiNmNWYxZWQiIG9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-40"></div>
-        
+
         <div className="relative h-full max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
@@ -111,10 +112,11 @@ const featuredBoards = [
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-5xl lg:text-7xl font-serif text-stone-900 leading-tight"
+              style={{ lineHeight: '6rem' }}
+              className="text-5xl lg:text-7xl font-serif text-stone-900 leading-tight "
             >
               Nghệ Thuật <br />
-              <span className="text-amber-700">Gỗ Teak</span>
+              <span className="text-amber-700 ">Gỗ Teak</span>
             </motion.h1>
 
             <motion.p
@@ -123,7 +125,7 @@ const featuredBoards = [
               transition={{ delay: 0.6 }}
               className="text-lg lg:text-xl text-stone-700 leading-relaxed max-w-xl"
             >
-              Thớt gỗ cao cấp được chế tác thủ công từ gỗ teak nguyên khối. 
+              Thớt gỗ cao cấp được chế tác thủ công từ gỗ teak ghép.
               Sự kết hợp hoàn hảo giữa thẩm mỹ và công năng cho gian bếp hiện đại.
             </motion.p>
 
@@ -134,7 +136,7 @@ const featuredBoards = [
               className="flex flex-wrap gap-4"
             >
               <button className="bg-amber-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-amber-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 pointer-events-auto">
-               <a href="https://newmwayteakwood.vn/product">Xem sản phẩm</a> 
+                <a href="https://newmwayteakwood.vn/product">Xem sản phẩm</a>
               </button>
               <button className="border-2 border-stone-900 text-stone-900 px-8 py-4 rounded-full font-semibold hover:bg-stone-900 hover:text-white transition-all pointer-events-auto">
                 <a href="https://newmwayteakwood.vn/info"> Tìm hiểu thêm</a>
@@ -152,8 +154,8 @@ const featuredBoards = [
                 <div className="text-sm text-stone-600">Tự nhiên</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-amber-700">5+</div>
-                <div className="text-sm text-stone-600">Năm bảo hành</div>
+                <div className="text-3xl font-bold text-amber-700">7 Ngày </div>
+                <div className="text-sm text-stone-600">Bảo hành 1 đổi 1</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-amber-700">1000+</div>
@@ -189,7 +191,7 @@ const featuredBoards = [
       </section>
 
       {/* ABOUT */}
-      <motion.section 
+      <motion.section
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
@@ -197,7 +199,7 @@ const featuredBoards = [
         className="py-20 lg:py-32  relative z-20"
       >
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
-          <motion.h2 
+          <motion.h2
             variants={fadeInUp}
             className="font-serif text-4xl lg:text-6xl mb-16 text-stone-900 text-center"
           >
@@ -206,22 +208,162 @@ const featuredBoards = [
 
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
             <motion.div variants={fadeInUp} className="space-y-5">
-              <div className="w-20 h-0.5 bg-amber-600" />
               <p className="text-base lg:text-lg leading-relaxed text-stone-700">
-              
+
               </p>
             </motion.div>
             <motion.div variants={fadeInUp} className="space-y-5">
-              <div className="w-20 h-0.5 bg-amber-600" />
               <p className="text-base lg:text-lg leading-relaxed text-stone-700">
-                NEWMWAY chuyên sản xuất và cung cấp thớt gỗ teak nguyên khối, bền đẹp,
-                chống nước và an toàn thực phẩm cho mọi gia đình.
+                NEWMWAY chuyên sản xuất và cung cấp thớt gỗ teak ghép, bền đẹp
+                và an toàn thực phẩm cho mọi gia đình.
               </p>
             </motion.div>
           </div>
         </div>
       </motion.section>
+      {/* FEATURES & TECHNOLOGY SECTION */}
+      <motion.section
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="py-20 lg:py-32 bg-gradient-to-br from-stone-50 via-white to-amber-50 relative z-20 overflow-hidden"
+      >
+        {/* Decorative Background */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-amber-200 rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-stone-300 rounded-full blur-3xl opacity-20"></div>
 
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+          {/* Section Header */}
+          <motion.div variants={fadeInUp} className="text-center mb-16 lg:mb-24">
+            <motion.div
+              variants={fadeInUp}
+              className="inline-block px-4 py-2 bg-amber-600 text-white text-xs font-bold tracking-wider rounded-full mb-6"
+            >
+              CÔNG NGHỆ HIỆN ĐẠI
+            </motion.div>
+            <h2 className="font-serif text-4xl lg:text-6xl mb-6 text-stone-900" style={{lineHeight:'6rem'}}>
+              Trải Nghiệm Mua Sắm <br className="hidden lg:block" />
+              <span className="text-amber-700">Thông Minh</span>
+            </h2>
+            <p className="text-base lg:text-lg text-stone-600 max-w-2xl mx-auto leading-relaxed">
+              NEWMWAY mang đến giải pháp mua sắm toàn diện với công nghệ tiên tiến,
+              giúp bạn dễ dàng tìm kiếm và sở hữu sản phẩm thớt gỗ yêu thích.
+            </p>
+          </motion.div>
+
+          {/* Features Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            {/* Feature 1: Shopping on App & Website */}
+            <motion.div
+              variants={fadeInUp}
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 group"
+            >
+              <motion.div
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.6 }}
+                className="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-700 rounded-2xl flex items-center justify-center mb-6 group-hover:shadow-lg"
+              >
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </motion.div>
+              <h3 className="font-serif text-2xl lg:text-3xl mb-4 text-stone-900">
+                Mua Hàng Đa Nền Tảng
+              </h3>
+              <p className="text-stone-600 leading-relaxed mb-6">
+                Truy cập và đặt hàng mọi lúc mọi nơi qua website hoặc ứng dụng di động.
+                Giao diện thân thiện, dễ sử dụng trên mọi thiết bị.
+              </p>
+              <div className="flex gap-3">
+                <div className="flex items-center gap-2 text-sm text-amber-700 font-semibold">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  App iOS & Android
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Feature 2: AI Chatbot */}
+            <motion.div
+              variants={fadeInUp}
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 group"
+            >
+              <motion.div
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.6 }}
+                className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-700 rounded-2xl flex items-center justify-center mb-6 group-hover:shadow-lg"
+              >
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                </svg>
+              </motion.div>
+              <h3 className="font-serif text-2xl lg:text-3xl mb-4 text-stone-900">
+                AI Chatbot Thông Minh
+              </h3>
+              <p className="text-stone-600 leading-relaxed mb-6">
+                Trợ lý ảo hỗ trợ tư vấn 24/7, giúp bạn tìm kiếm sản phẩm phù hợp.
+                Tìm kiếm bằng hình ảnh - chỉ cần chụp ảnh, AI sẽ gợi ý ngay!
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-sm text-green-700 font-semibold">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Tìm kiếm bằng hình ảnh
+                </div>
+                <div className="flex items-center gap-2 text-sm text-green-700 font-semibold">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Tư vấn tức thì
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Feature 3: Online Payment */}
+            <motion.div
+              variants={fadeInUp}
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 group"
+            >
+              <motion.div
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.6 }}
+                className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-700 rounded-2xl flex items-center justify-center mb-6 group-hover:shadow-lg"
+              >
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                </svg>
+              </motion.div>
+              <h3 className="font-serif text-2xl lg:text-3xl mb-4 text-stone-900">
+                Thanh Toán Linh Hoạt
+              </h3>
+              <p className="text-stone-600 leading-relaxed mb-6">
+                Đa dạng phương thức thanh toán online an toàn: thẻ ngân hàng,
+                ví điện tử, chuyển khoản. Bảo mật tuyệt đối mọi giao dịch.
+              </p>
+              <div className="flex flex-wrap gap-2">
+
+                <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full">
+                  VNPay
+                </span>
+                <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full">
+                  Banking
+                </span>
+                <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full">
+                  Thanh Toán Khi Nhận Hàng
+                </span>
+              </div>
+            </motion.div>
+          </div>
+
+
+        </div>
+      </motion.section>
       {/* SHOP APP SECTION */}
       <motion.section
         variants={staggerContainer}
@@ -238,7 +380,7 @@ const featuredBoards = [
               className="space-y-8 relative z-20 pointer-events-auto"
             >
               <div className="space-y-4">
-                <motion.div 
+                <motion.div
                   variants={fadeInUp}
                   className="inline-block px-4 py-2 bg-amber-600 text-white text-xs font-bold tracking-wider rounded-full"
                 >
@@ -249,7 +391,7 @@ const featuredBoards = [
                   qua Website & App
                 </h2>
                 <p className="text-base lg:text-lg text-stone-700 leading-relaxed">
-                  Trải nghiệm mua sắm thớt gỗ cao cấp ngay trên điện thoại hoặc máy tính. 
+                  Trải nghiệm mua sắm thớt gỗ cao cấp ngay trên điện thoại hoặc máy tính.
                   Thanh toán an toàn, giao hàng nhanh chóng, hỗ trợ 24/7.
                 </p>
               </div>
@@ -290,7 +432,7 @@ const featuredBoards = [
               </div>
 
               {/* Download Buttons */}
-              <motion.div 
+              <motion.div
                 variants={fadeInUp}
                 className="space-y-4 pt-6"
               >
@@ -306,7 +448,7 @@ const featuredBoards = [
                     className="flex items-center gap-3 bg-black text-white px-6 py-3 rounded-xl hover:bg-stone-800 transition-colors shadow-lg pointer-events-auto"
                   >
                     <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
                     </svg>
                     <div className="text-left">
                       <div className="text-xs">Download on the</div>
@@ -322,7 +464,7 @@ const featuredBoards = [
                     className="flex items-center gap-3 bg-black text-white px-6 py-3 rounded-xl hover:bg-stone-800 transition-colors shadow-lg pointer-events-auto"
                   >
                     <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                      <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
                     </svg>
                     <div className="text-left">
                       <div className="text-xs">GET IT ON</div>
@@ -353,7 +495,7 @@ const featuredBoards = [
             >
               <div className="relative">
                 {/* Desktop/Website Mockup in background */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -403,69 +545,69 @@ const featuredBoards = [
           </div>
         </div>
 
+
         {/* Decorative Elements */}
         <div className="absolute top-0 left-0 w-64 h-64 bg-amber-200 rounded-full blur-3xl opacity-20 -z-10"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-stone-300 rounded-full blur-3xl opacity-20 -z-10"></div>
       </motion.section>
 
-     {/* FEATURED CUTTING BOARDS */}
-{/* FEATURED CUTTING BOARDS */}
-<motion.section
-  variants={staggerContainer}
-  initial="hidden"
-  whileInView="show"
-  viewport={{ once: true }}
-  className="py-20 lg:py-28 relative z-20"
->
-  <div className="max-w-7xl mx-auto px-6 lg:px-12">
-    <motion.h2 
-      variants={fadeInUp}
-      className="font-serif text-3xl lg:text-5xl mb-6 text-stone-900 text-center"
-    >
-      Các Sản Phẩm Thớt Nổi Bật
-    </motion.h2>
+      {/* FEATURED CUTTING BOARDS */}
+      <motion.section
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="py-20 lg:py-28 relative z-20 bg-white"
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <motion.h2
+            variants={fadeInUp}
+            className="font-serif text-3xl lg:text-5xl mb-6 text-stone-900 text-center"
+          >
+            Các Sản Phẩm Thớt Nổi Bật
+          </motion.h2>
 
-    <motion.p
-      variants={fadeInUp}
-      className="text-center text-stone-600 mb-16 max-w-2xl mx-auto"
-    >
-      Tuyển chọn những mẫu thớt gỗ teak cao cấp, bền đẹp và an toàn cho gian bếp.
-    </motion.p>
+          <motion.p
+            variants={fadeInUp}
+            className="text-center text-stone-600 mb-16 max-w-2xl mx-auto"
+          >
+            Tuyển chọn những mẫu thớt gỗ teak cao cấp, bền đẹp và an toàn cho gian bếp.
+          </motion.p>
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-      {featuredBoards.map((item, index) => (
-        <motion.div
-          key={index}
-          variants={fadeInUp}
-          whileHover={{ y: -12 }}
-          className=" rounded-3xl shadow-xl overflow-hidden group  "
-        >
-          <div className="overflow-hidden">
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
-            />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {featuredBoards.map((item, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                whileHover={{ y: -12 }}
+                className=" rounded-3xl shadow-xl overflow-hidden group  "
+              >
+                <div className="overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+
+                <div className="p-6 text-center">
+                  <h3 className="font-serif text-xl mb-2 text-stone-900">
+                    {item.name}
+                  </h3>
+
+                  <p className="text-sm text-stone-600 mb-4">
+                    {item.desc}
+                  </p>
+
+                  <span className="inline-block font-semibold text-stone-800">
+                    {item.price}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
           </div>
-
-          <div className="p-6 text-center">
-            <h3 className="font-serif text-xl mb-2 text-stone-900">
-              {item.name}
-            </h3>
-
-            <p className="text-sm text-stone-600 mb-4">
-              {item.desc}
-            </p>
-
-            <span className="inline-block font-semibold text-stone-800">
-              {item.price}
-            </span>
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</motion.section>
+        </div>
+      </motion.section>
 
 
 
@@ -478,9 +620,8 @@ const featuredBoards = [
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className={`grid md:grid-cols-2 gap-12 lg:gap-16 items-center mb-20 lg:mb-32 ${
-                index === features.length - 1 ? 'mb-0' : ''
-              }`}
+              className={`grid md:grid-cols-2 gap-12 lg:gap-16 items-center mb-20 lg:mb-32 ${index === features.length - 1 ? 'mb-0' : ''
+                }`}
             >
               <motion.div
                 variants={index % 2 === 0 ? fadeInLeft : fadeInRight}
@@ -516,7 +657,7 @@ const featuredBoards = [
       </section>
 
       {/* WOOD SHOWCASE */}
-      <motion.section 
+      <motion.section
         variants={fadeInUp}
         initial="initial"
         whileInView="whileInView"
@@ -526,17 +667,17 @@ const featuredBoards = [
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url(https://scontent.fsgn5-2.fna.fbcdn.net/v/t39.30808-6/541829114_122240522138035371_3848242782207477073_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=Vd3KpO0UK3IQ7kNvwFPSdEL&_nc_oc=AdmqT-PWarkWm_1d4odmhnFXy9TWfRGfBgc2CL_KmKCMxRDVDAPWrA7MY51xqtMPBdI&_nc_zt=23&_nc_ht=scontent.fsgn5-2.fna&_nc_gid=Msi2tnZ76CzWTqPd8l4vLg&oh=00_AfuawIvKgyxVstsDWKo1E0KJizCS1R9ZV2tTBSDMb20MPA&oe=698529F3)",
+            backgroundImage: "url(https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/481664392_1043236774512661_124410764154567820_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=IOWU2xGPzAoQ7kNvwF3M5dC&_nc_oc=AdlqKtln_bSIJsshbkp9nVttzj_VdutN1HSb0OJqG801Tt16ljNCMkb54MGBWfT3tbU&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=g3CudHb-tffKo-DncpOfKQ&oh=00_Afv4BEoM-De0uKnk2ZEedD3R_alJMUApSWVskEOmJNZI5Q&oe=6984F18D)",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-        
+
         <div className="relative h-full flex items-end">
           <div className="w-full backdrop-blur-sm bg-black/40 text-white py-12 lg:py-16">
             <div className="max-w-6xl mx-auto px-6 lg:px-12">
               <h3 className="font-serif text-3xl lg:text-5xl mb-4">Các loại thớt</h3>
               <p className="text-base lg:text-xl text-gray-200 font-light">
-                Vuông – Tròn – Chữ Nhật
+                Oval, gấu, xương cá...
               </p>
             </div>
           </div>
@@ -544,7 +685,7 @@ const featuredBoards = [
       </motion.section>
 
       {/* LARGE PRODUCT SHOWCASE */}
-      <motion.section 
+      <motion.section
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
@@ -552,14 +693,14 @@ const featuredBoards = [
         className="py-20 lg:py-32 bg-stone-50 relative z-20"
       >
         <div className="max-w-6xl mx-auto px-6 lg:px-12 text-center">
-          <motion.h2 
+          <motion.h2
             variants={fadeInUp}
             className="font-serif text-4xl lg:text-6xl mb-8 text-stone-900"
           >
             Sản phẩm sinh thái
           </motion.h2>
 
-          <motion.p 
+          <motion.p
             variants={fadeInUp}
             className="text-base lg:text-lg mb-16 text-stone-600 max-w-3xl mx-auto leading-relaxed"
           >
@@ -590,7 +731,7 @@ const featuredBoards = [
         className="py-20 lg:py-32 bg-stone-900 text-white relative z-20"
       >
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
-          <motion.h2 
+          <motion.h2
             variants={fadeInUp}
             className="font-serif text-4xl lg:text-6xl mb-16 text-center"
           >
@@ -657,14 +798,14 @@ const featuredBoards = [
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-         <iframe
-          className="w-full h-full"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.964130182879!2d106.70182039567204!3d10.737248012184759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f9bcdf928d7%3A0xe8b955633ca8ebbe!2zS2h1IMSR4buLbmggY8awIFTDom4gUXV5IMSQw7RuZywgVMOibiBQaG9uZywgUXXhuq1uIDcsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1769953693401!5m2!1svi!2s"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            className="w-full h-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.964130182879!2d106.70182039567204!3d10.737248012184759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f9bcdf928d7%3A0xe8b955633ca8ebbe!2zS2h1IMSR4buLbmggY8awIFTDom4gUXV5IMSQw7RuZywgVMOibiBQaG9uZywgUXXhuq1uIDcsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1769953693401!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </motion.div>
       </section>
 
       {/* FOOTER */}
-      <motion.footer 
+      <motion.footer
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -675,23 +816,24 @@ const featuredBoards = [
             <div>
               <h3 className="text-2xl font-bold mb-4 tracking-wider">NEWMWAY</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Thớt Gỗ Teak New M Way - Uy Tín Số 1 Việt Nam
+Thớt gỗ teak New M Way được khai thác và sản xuất nguyên chất từ Gỗ rừng trồng Teak (tiếng việt gọi là Giá Tỵ) dùng để chế biến thực phẩm, đựng và trang trí thức ăn theo phong cách phương tây, dọn lên bàn cùng những món BBQ, Beefsteak...
+            <br /> Thớt gỗ teak newway đã và đang có mặt trên khắp các căn bếp Mỹ, vậy thì ko có lí do j các bà nội trợ Việt còn chừng chừ khi chưa trải nghiệm sản phẩm giá trị này.
               </p>
             </div>
             <div>
               <h4 className="font-bold mb-4">Liên kết</h4>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li className="hover:text-amber-400 cursor-pointer transition-colors">Facebook</li>
-                <li className="hover:text-amber-400 cursor-pointer transition-colors">Wesite</li>
+                <li className="hover:text-amber-400 cursor-pointer transition-colors"> <a href="https://www.facebook.com/thotgoteak.newwayteakwood/"> Facebook</a></li>
+                <li className="hover:text-amber-400 cursor-pointer transition-colors"><a href="https://newmwayteakwood.vn/"> Website</a></li>
                 <li className="hover:text-amber-400 cursor-pointer transition-colors">Ứng Dụng</li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-4">Liên hệ</h4>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li>Email: info@newmway.vn</li>
+                <li>Email: newmwayteakwood@gmail.com</li>
                 <li>Hotline: 077 343 7979</li>
-                <li>G1-22 KDC Tân Quy Đông, Đường 63, Phường Tân Phong, Quận 7, Hồ Chí Minh</li>
+                <li>22 G1 KDC Tân Quy Đông, Đường 63, Phường Tân Phong, Quận 7, Hồ Chí Minh</li>
               </ul>
             </div>
           </div>
