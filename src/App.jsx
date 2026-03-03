@@ -2,6 +2,7 @@
 import { useState } from "react";
 import HomePage from "./pages/HomePage";
 import WelcomePage from "./pages/WelcomePage";
+import ChatWidget from "./components/ChatWidget";
 
 function App() {
   const [showHome, setShowHome] = useState(false);
@@ -9,8 +10,12 @@ function App() {
   if (!showHome) {
     return <WelcomePage onExplore={() => setShowHome(true)} />;
   }
-
-  return <HomePage />;
+return (
+    <>
+      <HomePage />
+      <ChatWidget />
+    </>
+  );
 }
 
 export default App;

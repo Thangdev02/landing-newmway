@@ -12,7 +12,7 @@ export default function WelcomePage({ onExplore }) {
           transition={{ duration: 1.5 }}
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url(https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/481664392_1043236774512661_124410764154567820_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=IOWU2xGPzAoQ7kNvwF3M5dC&_nc_oc=AdlqKtln_bSIJsshbkp9nVttzj_VdutN1HSb0OJqG801Tt16ljNCMkb54MGBWfT3tbU&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=g3CudHb-tffKo-DncpOfKQ&oh=00_Afv4BEoM-De0uKnk2ZEedD3R_alJMUApSWVskEOmJNZI5Q&oe=6984F18D)",
+            backgroundImage: "url(/wc.jpg",
           }}
         />
         <div className="absolute inset-0 bg-black/40" />

@@ -1,7 +1,7 @@
 // pages/HomePage.jsx
 import { Truck, CreditCard, Gift, Headphones } from "lucide-react";
 import { motion } from "framer-motion";
-import CuttingBoard3D from "../components/Cuttingboard3d";
+import { Leaf, Clock, Sparkles, UtensilsCrossed, Handshake, Telescope, Target } from "lucide-react";
 
 export default function HomePage() {
 
@@ -35,7 +35,18 @@ export default function HomePage() {
       }
     }
   };
-
+  const missionItems = [
+    "Cung cấp sản phẩm thớt gỗ Teak chất lượng cao, an toàn cho sức khỏe người dùng",
+    "Nâng cao nhận thức của khách hàng về lợi ích của gỗ tự nhiên so với thớt nhựa/tre ép",
+    "Góp phần thúc đẩy lối sống xanh – tiêu dùng bền vững thông qua sản phẩm gia dụng",
+  ];
+  const coreValues = [
+    { icon: Leaf, title: "Tự nhiên & An toàn", desc: "100% gỗ Teak RỪNG TRỒNG, không hóa chất độc hại" },
+    { icon: Clock, title: "Bền bỉ theo thời gian", desc: "Hạn chế cong vênh, không dăm mùn, dùng lâu dài" },
+    { icon: Sparkles, title: "Tinh tế & thẩm mỹ", desc: "Thiết kế đẹp, vân gỗ sang trọng" },
+    { icon: UtensilsCrossed, title: "Thực tế & hữu dụng", desc: "Phục vụ đúng nhu cầu nấu ăn hàng ngày" },
+    { icon: Handshake, title: "Chân thật & minh bạch", desc: "Truyền thông đúng giá trị sản phẩm, không phóng đại" },
+  ];
   const featuredBoards = [
     {
       name: "Thớt Gỗ Teak NEW M WAY Vuông Và Chữ Nhật Dày 38mm",
@@ -50,10 +61,10 @@ export default function HomePage() {
       image: "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lkwqe3hhc9ul1c@resize_w450_nl.webp",
     },
     {
-      name: "Thớt Gỗ Teak NEW M WAY Đầu Cây dài 40cm",
+      name: "Thớt Gỗ Teak NEW M WAY Đầu Cây Tròn 40cm Dày 3,8cm",
       desc: "Thớt gỗ teak New M Way được khai thác và sản xuất nguyên chất từ Gỗ rừng trồng Teak... ",
-      price: "663.734 VND",
-      image: "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/480612648_122212351574035371_2400893491941376911_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=VG3Xpc5FKUoQ7kNvwHdWTfc&_nc_oc=AdmJsStNL4GFwywMobxdZ3EMwwJgjEL9v82FYDvTh8D7Sas0HOZYeL82yB_d5FQuhZo&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=E9Ema52Z-_3rz0pAn9HoOQ&oh=00_AftE9jKZVxiLR-u5HR70p2uUP_A0_gBxdJIqU-fRpZzcCw&oe=6985215F",
+      price: "537.000 VND",
+      image: "product3.webp",
     }
   ];
 
@@ -85,7 +96,6 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-stone-50 relative">
       {/* 3D Cutting Board - nằm trên cùng */}
-      <CuttingBoard3D />
 
       {/* NEW HOME HERO WITH 3D */}
       <section className="relative h-screen overflow-hidden bg-gradient-to-br from-amber-50 via-stone-50 to-amber-100">
@@ -165,15 +175,29 @@ export default function HomePage() {
           </motion.div>
 
           {/* Right Side - 3D Space (3D board will appear here) */}
+          {/* Right Side - 3D Space (3D board will appear here) */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
             className="relative h-full flex items-center justify-center"
           >
-            {/* Decorative elements */}
-            <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-amber-200 rounded-full blur-3xl opacity-20"></div>
-            <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-stone-300 rounded-full blur-3xl opacity-20"></div>
+            <motion.img
+              src="/pd1.png"
+              alt="Teak Board"
+              initial={{ y: 40, rotate: -4 }}
+              animate={{
+                y: [0, -20, 0],
+                rotate: [-4, 4, -4]
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="w-full max-w-xl drop-shadow-2xl"
+            />
+
           </motion.div>
         </div>
 
@@ -196,27 +220,71 @@ export default function HomePage() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="py-20 lg:py-32  relative z-20"
+        className="py-20 lg:py-28 relative z-20 overflow-hidden"
       >
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
-          <motion.h2
-            variants={fadeInUp}
-            className="font-serif text-4xl lg:text-6xl mb-16 text-stone-900 text-center"
-          >
-            Chúng tôi làm gì
-          </motion.h2>
-
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
-            <motion.div variants={fadeInUp} className="space-y-5">
-              <p className="text-base lg:text-lg leading-relaxed text-stone-700">
-
-              </p>
+          <motion.div variants={fadeInUp} className="text-center mb-16">
+            <motion.div className="inline-block px-4 py-2 bg-amber-600 text-white text-xs font-bold tracking-wider rounded-full mb-6">
+              VỀ NEWMWAY
             </motion.div>
-            <motion.div variants={fadeInUp} className="space-y-5">
+            <h2 className="font-serif text-4xl lg:text-6xl text-stone-900">
+              Chúng tôi làm gì
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -60, rotate: -6 }}
+              whileInView={{ opacity: 1, x: 0, rotate: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9, ease: "easeOut" }}
+              className="relative flex items-center justify-center"
+            >
+              <motion.div
+                whileHover={{ scale: 1.04, rotate: 2 }}
+                transition={{ type: "spring", stiffness: 200 }}
+                className="relative"
+              >
+                <div className="absolute -inset-4 bg-amber-100 rounded-3xl blur-2xl opacity-60 -z-10"></div>
+                <img
+                  src="/pd2.png"
+                  alt="Teak Cutting Board"
+                  className="w-full max-w-lg object-contain drop-shadow-[0_20px_40px_rgba(120,80,20,0.2)]"
+                />
+              </motion.div>
+            </motion.div>
+
+            {/* Text */}
+            <motion.div variants={fadeInUp} className="space-y-6">
+              <h3 className="font-serif text-2xl lg:text-3xl text-stone-900">
+                Thớt gỗ Teak – Từ rừng trồng đến gian bếp của bạn
+              </h3>
               <p className="text-base lg:text-lg leading-relaxed text-stone-700">
                 NEWMWAY chuyên sản xuất và cung cấp thớt gỗ teak ghép, bền đẹp
-                và an toàn thực phẩm cho mọi gia đình.
+                và an toàn thực phẩm cho mọi gia đình Việt Nam.
               </p>
+              <p className="text-base lg:text-lg leading-relaxed text-stone-600">
+                Mỗi chiếc thớt được chế tác từ gỗ Teak rừng trồng đạt chuẩn,
+                qua quy trình xử lý kỹ lưỡng — không hóa chất, không chất bảo quản
+                độc hại — đảm bảo an toàn tuyệt đối cho sức khỏe người dùng.
+              </p>
+              <p className="text-base lg:text-lg leading-relaxed text-stone-600">
+                Với vân gỗ tự nhiên sang trọng, bề mặt mịn màng bảo vệ lưỡi dao,
+                và độ bền vượt trội theo thời gian, thớt NEWMWAY là người bạn đồng hành
+                lý tưởng trong mỗi căn bếp hiện đại.
+              </p>
+              <motion.a
+                href="https://newmwayteakwood.vn/product"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="inline-flex items-center gap-2 bg-amber-600 text-white px-7 py-3 rounded-full font-semibold hover:bg-amber-700 transition-colors shadow-md"
+              >
+                Khám phá sản phẩm
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </motion.a>
             </motion.div>
           </div>
         </div>
@@ -242,7 +310,7 @@ export default function HomePage() {
             >
               CÔNG NGHỆ HIỆN ĐẠI
             </motion.div>
-            <h2 className="font-serif text-4xl lg:text-6xl mb-6 text-stone-900" style={{lineHeight:'6rem'}}>
+            <h2 className="font-serif text-4xl lg:text-6xl mb-6 text-stone-900" style={{ lineHeight: '6rem' }}>
               Trải Nghiệm Mua Sắm <br className="hidden lg:block" />
               <span className="text-amber-700">Thông Minh</span>
             </h2>
@@ -580,7 +648,7 @@ export default function HomePage() {
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ y: -12 }}
-                className=" rounded-3xl shadow-xl overflow-hidden group  "
+                className="rounded-3xl shadow-xl overflow-hidden group"
               >
                 <div className="overflow-hidden">
                   <img
@@ -589,72 +657,115 @@ export default function HomePage() {
                     className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
-
                 <div className="p-6 text-center">
-                  <h3 className="font-serif text-xl mb-2 text-stone-900">
-                    {item.name}
-                  </h3>
-
-                  <p className="text-sm text-stone-600 mb-4">
-                    {item.desc}
-                  </p>
-
-                  <span className="inline-block font-semibold text-stone-800">
-                    {item.price}
-                  </span>
+                  <h3 className="font-serif text-xl mb-2 text-stone-900">{item.name}</h3>
+                  <p className="text-sm text-stone-600 mb-4">{item.desc}</p>
+                  <span className="inline-block font-semibold text-stone-800">{item.price}</span>
                 </div>
               </motion.div>
             ))}
           </div>
+
+          {/* Nút xem tất cả */}
+          <motion.div
+            variants={fadeInUp}
+            className="flex justify-center mt-14"
+          >
+            <motion.a
+              href="https://newmwayteakwood.vn/product"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-3 bg-stone-900 text-white px-10 py-4 rounded-full font-semibold hover:bg-amber-600 transition-colors duration-300 shadow-lg group"
+            >
+              Xem tất cả sản phẩm
+              <motion.span
+                animate={{ x: [0, 4, 0] }}
+                transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </motion.span>
+            </motion.a>
+          </motion.div>
         </div>
       </motion.section>
 
 
 
       {/* FEATURE SPLIT SECTION */}
-      <section className="py-20 lg:py-32 bg-stone-50 relative z-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className={`grid md:grid-cols-2 gap-12 lg:gap-16 items-center mb-20 lg:mb-32 ${index === features.length - 1 ? 'mb-0' : ''
-                }`}
-            >
-              <motion.div
-                variants={index % 2 === 0 ? fadeInLeft : fadeInRight}
-                initial="initial"
-                whileInView="whileInView"
-                viewport={{ once: true }}
-                className={`${index % 2 === 1 ? 'md:order-2' : ''}`}
-              >
-                <img
-                  src={feature.image}
-                  alt={feature.title}
-                  className="w-full h-[300px] lg:h-[450px] object-cover rounded-3xl shadow-2xl"
-                />
-              </motion.div>
-              <motion.div
-                variants={index % 2 === 0 ? fadeInRight : fadeInLeft}
-                initial="initial"
-                whileInView="whileInView"
-                viewport={{ once: true }}
-                className={`space-y-6 ${index % 2 === 1 ? 'md:order-1' : ''}`}
-              >
-                <div className="w-16 h-1 bg-amber-600" />
-                <h3 className="font-serif text-3xl lg:text-5xl text-stone-900">
-                  {feature.title}
-                </h3>
-                <p className="text-base lg:text-lg text-stone-700 leading-relaxed">
-                  {feature.desc}
-                </p>
-              </motion.div>
+      <motion.section variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true }} className="py-20 lg:py-32 bg-gradient-to-br from-stone-50 via-white to-amber-50 relative z-20 overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-amber-200 rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-stone-300 rounded-full blur-3xl opacity-20"></div>
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+          <motion.div variants={fadeInUp} className="text-center mb-20">
+            <motion.div variants={fadeInUp} className="inline-block px-4 py-2 bg-amber-600 text-white text-xs font-bold tracking-wider rounded-full mb-6">
+              VỀ CHÚNG TÔI
             </motion.div>
-          ))}
+            <h2 className="font-serif text-4xl lg:text-6xl text-stone-900" style={{ lineHeight: '5rem' }}>
+              Định hướng <span className="text-amber-700">phát triển</span>
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-10 mb-20">
+            <motion.div variants={fadeInLeft} whileHover={{ y: -6, scale: 1.02 }} className="bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 border-l-4 border-amber-500">
+              <div className="w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-700 rounded-2xl flex items-center justify-center mb-6 shadow-md">
+                <Telescope size={28} className="text-white" />
+              </div>
+              <h3 className="font-serif text-3xl mb-5 text-stone-900">Tầm Nhìn</h3>
+              <p className="text-stone-600 leading-relaxed text-base lg:text-lg">
+                Trở thành thương hiệu thớt gỗ Teak được tin dùng hàng đầu tại Việt Nam, đại diện cho phong cách sống <span className="font-semibold text-amber-700">tự nhiên – bền vững – tinh tế</span> trong gian bếp hiện đại.
+              </p>
+            </motion.div>
+
+            <motion.div variants={fadeInRight} whileHover={{ y: -6, scale: 1.02 }} className="bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 border-l-4 border-stone-600">
+              <div className="w-14 h-14 bg-gradient-to-br from-stone-500 to-stone-800 rounded-2xl flex items-center justify-center mb-6 shadow-md">
+                <Target size={28} className="text-white" />
+              </div>
+              <h3 className="font-serif text-3xl mb-5 text-stone-900">Sứ Mệnh</h3>
+              <ul className="space-y-4">
+                {missionItems.map((item, i) => (
+                  <motion.li key={i} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 * i, duration: 0.5 }} className="flex items-start gap-3 text-stone-600 text-sm lg:text-base leading-relaxed">
+                    <span className="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-amber-100 flex items-center justify-center">
+                      <svg className="w-3 h-3 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clipRule="evenodd" /></svg>
+                    </span>
+                    {item}
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+
+          <motion.div variants={fadeInUp} className="text-center mb-12">
+            <h3 className="font-serif text-3xl lg:text-5xl text-stone-900">Giá Trị Cốt Lõi</h3>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {coreValues.map((val, i) => {
+              const Icon = val.icon;
+              return (
+                <motion.div
+                  key={i}
+                  variants={fadeInUp}
+                  whileHover={{ y: -8, scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center cursor-default"
+                >
+                  <motion.div
+                    animate={{ rotate: [0, 8, -8, 0] }}
+                    transition={{ repeat: Infinity, duration: 4 + i, ease: "easeInOut" }}
+                    className="flex justify-center mb-4"
+                  >
+                    <Icon size={36} className="text-amber-600" />
+                  </motion.div>
+                  <h4 className="font-bold text-stone-900 text-sm mb-2 leading-snug">{val.title}</h4>
+                  <p className="text-xs text-stone-500 leading-relaxed">{val.desc}</p>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* WOOD SHOWCASE */}
       <motion.section
@@ -662,12 +773,12 @@ export default function HomePage() {
         initial="initial"
         whileInView="whileInView"
         viewport={{ once: true }}
-        className="relative h-[350px] lg:h-[550px] overflow-hidden z-20"
+        className="relative h-[350px] lg:h-[850px] overflow-hidden z-20"
       >
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url(https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/481664392_1043236774512661_124410764154567820_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=IOWU2xGPzAoQ7kNvwF3M5dC&_nc_oc=AdlqKtln_bSIJsshbkp9nVttzj_VdutN1HSb0OJqG801Tt16ljNCMkb54MGBWfT3tbU&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=g3CudHb-tffKo-DncpOfKQ&oh=00_Afv4BEoM-De0uKnk2ZEedD3R_alJMUApSWVskEOmJNZI5Q&oe=6984F18D)",
+            backgroundImage: "url(/clt.jpg)",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
@@ -714,7 +825,7 @@ export default function HomePage() {
             className="overflow-hidden rounded-3xl shadow-2xl"
           >
             <img
-              src="https://scontent.fsgn5-11.fna.fbcdn.net/v/t39.30808-6/480278415_122211473990035371_6473907223809413136_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=W_zE1TCqhiIQ7kNvwGLfDL3&_nc_oc=Adks8JHWAFK40R2EWMVCwiIGCaq_Vr80v3dhBHAPQY_hXdOQe709JGcM2IKpDgCgE9E&_nc_zt=23&_nc_ht=scontent.fsgn5-11.fna&_nc_gid=1OGtRDFmKjEFSdtaVCjL-A&oh=00_AfuuyDh49lxf2h7T3Gf-LUyexrQJeB8UUiI2SYItKPYaag&oe=698543F1"
+              src="/spst.jpg"
               alt="Thớt gỗ teak"
               className="w-full h-auto object-cover"
             />
@@ -784,7 +895,7 @@ export default function HomePage() {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: "url(https://scontent.fvkg1-1.fna.fbcdn.net/v/t1.6435-9/127662406_3710255295693638_4594713628425318961_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=39nV_7Dg4JAQ7kNvwE-ehQV&_nc_oc=Adm1D0_K6DwQ-c0FgIyQHd6lfrjqlcsou_4c83Gw3sIwX6TjztZvxmAwlGjxJ8LPMAgZYboCWGeReRwUjG5rQcBB&_nc_zt=23&_nc_ht=scontent.fvkg1-1.fna&_nc_gid=HKUsZQelSaC1v2Tbc5aqrA&oh=00_Afo10jaSBNShHp0aDHMAtf7LjdnWOBJInyxmtK6CaO_D7A&oe=69A06297)",
+              backgroundImage: "url(/final.jpg",
             }}
           />
           <div className="relative bg-gradient-to-t from-black/90 via-black/50 to-transparent text-white p-8 lg:p-12 h-full flex flex-col justify-end">
@@ -816,8 +927,8 @@ export default function HomePage() {
             <div>
               <h3 className="text-2xl font-bold mb-4 tracking-wider">NEWMWAY</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-Thớt gỗ teak New M Way được khai thác và sản xuất nguyên chất từ Gỗ rừng trồng Teak (tiếng việt gọi là Giá Tỵ) dùng để chế biến thực phẩm, đựng và trang trí thức ăn theo phong cách phương tây, dọn lên bàn cùng những món BBQ, Beefsteak...
-            <br /> Thớt gỗ teak newway đã và đang có mặt trên khắp các căn bếp Mỹ, vậy thì ko có lí do j các bà nội trợ Việt còn chừng chừ khi chưa trải nghiệm sản phẩm giá trị này.
+                Thớt gỗ teak New M Way được khai thác và sản xuất nguyên chất từ Gỗ rừng trồng Teak (tiếng việt gọi là Giá Tỵ) dùng để chế biến thực phẩm, đựng và trang trí thức ăn theo phong cách phương tây, dọn lên bàn cùng những món BBQ, Beefsteak...
+                <br /> Thớt gỗ teak newway đã và đang có mặt trên khắp các căn bếp Mỹ, vậy thì ko có lí do j các bà nội trợ Việt còn chừng chừ khi chưa trải nghiệm sản phẩm giá trị này.
               </p>
             </div>
             <div>
