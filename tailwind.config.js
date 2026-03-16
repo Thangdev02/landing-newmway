@@ -8,4 +8,8 @@ export default {
     extend: {},
   },
   plugins: [],
+   fontFamily: {
+        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
 }
